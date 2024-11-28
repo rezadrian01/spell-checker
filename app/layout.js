@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -23,6 +24,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="w-full flex justify-start p-8">
+          <Link className="font-bold text-3xl bg-gradient-to-r from-indigo-400 to-blue-700 bg-transparent bg-clip-text text-transparent" href='/'>
+            SpellMate
+          </Link>
+        </header>
         {children}
       </body>
     </html>
